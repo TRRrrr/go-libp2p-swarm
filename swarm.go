@@ -7,7 +7,6 @@ import (
 	"strings"
 	"sync"
 	"sync/atomic"
-	"time"
 
 	logging "github.com/ipfs/go-log"
 	"github.com/jbenet/goprocess"
@@ -20,11 +19,6 @@ import (
 	filter "github.com/libp2p/go-maddr-filter"
 	mafilter "github.com/whyrusleeping/multiaddr-filter"
 )
-
-// DialTimeout is the maximum duration a Dial is allowed to take.
-// This includes the time between dialing the raw network connection,
-// protocol selection as well the handshake, if applicable.
-var DialTimeout = 60 * time.Second
 
 var log = logging.Logger("swarm2")
 
